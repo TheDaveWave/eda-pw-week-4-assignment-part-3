@@ -44,4 +44,6 @@ function empty() {
 
 empty();
 
-console.log(basket);
+console.log(`After calling empty() basket is now ${basket}`, basket);
+
+
