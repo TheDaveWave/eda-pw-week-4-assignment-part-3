@@ -39,6 +39,9 @@ listItems(basket);
   - reset the `basket` to an empty array */
 
 function empty() {
-    return basket = [];
+    return basket.length = 0;
 }
 
+empty();
+
+console.log(basket);
