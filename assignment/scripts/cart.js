@@ -27,3 +27,7 @@ function listItems(arr) {
         console.log(item);
     }
 }
+
+addItem('orange');
+addItem('milk');
+
