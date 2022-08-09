@@ -5,3 +5,14 @@ console.log('***** Cart Functions *****');
 // - Create a global variable named `basket` and set it to an empty array.
 let basket = [];
 
+/* - Create a function called `addItem`. It should:
+  - take an input parameter for a string `item`
+  - add the new item to the global array `basket`. 
+  - return `true` indicating the item was added */
+
+  function addItem (item) {
+    basket.push(item);
+    return true;
+  }
+
+  
