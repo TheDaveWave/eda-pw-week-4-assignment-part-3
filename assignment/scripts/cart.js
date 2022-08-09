@@ -26,7 +26,7 @@ function addItem(item) {
   }
 }
 
-  console.log('addItem - should add apple to basket:', addItem('Apple'));
+  console.log('addItem - should add apple to basket:', addItem('Apple'), basket);
 
 /*  4. Create a function called `removeItem`. It should:
 - Take an input parameter for a string `item`
@@ -39,7 +39,7 @@ function removeItem(item) {
   if(basket.indexOf(item) === -1) {
     return null;
   } else {
-    itemRemoved = basket.splice(basket.indexOf(item));
+    itemRemoved = basket.splice(basket.indexOf(item),1);
     console.log('removeItem:',itemRemoved);
   }
 }
@@ -63,6 +63,11 @@ console.log('Trying to add sixth item: "Tortillas" should return false:', addIte
 
 console.log('listItems Test:');
 listItems(basket);
+
+removeItem('Banana');
+listItems(basket);
+
+console.log('Trying to remove an item that doesnt exist should return null:',removeItem('Cereal'));
 
 /* - Create a function called `empty`. It should:
   - reset the `basket` to an empty array */
