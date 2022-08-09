@@ -58,9 +58,9 @@ function isFull() {
         return true;
     } else if (basket.length < maxItems) {
         return false;
-    } else {
+    } /* else {
         return 'Basket is too full, please remove some items.'
-    }
+    } */
 }
 
 console.log('isFull should be false:', isFull());
