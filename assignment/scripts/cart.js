@@ -12,7 +12,11 @@ let basket = [];
 
   function addItem (item) {
     basket.push(item);
+    console.log(basket);
     return true;
   }
+
+  console.log('addItem - should add apple to basket:', addItem('apple'));
+
 
   
