@@ -34,3 +34,11 @@ addItem('milk');
 
 console.log('listItems Test:');
 listItems(basket);
+
+/* - Create a function called `empty`. It should:
+  - reset the `basket` to an empty array */
+
+function empty() {
+    return basket = [];
+}
+
