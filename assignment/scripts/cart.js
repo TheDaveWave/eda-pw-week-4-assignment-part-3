@@ -56,8 +56,10 @@ const maxItems = 5;
 function isFull() {
     if(basket.length >= maxItems) {
         return true;
-    } else {
+    } else if (basket.length < maxItems) {
         return false;
+    } else {
+        return 'Basket is too full, please remove some items.'
     }
 }
 
