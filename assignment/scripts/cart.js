@@ -4,16 +4,26 @@ console.log('***** Cart Functions *****');
 
 // - Create a global variable named `basket` and set it to an empty array.
 let basket = [];
+// 1. Add a global `const` named `maxItems` and set it to 5.
+const maxItems = 5;
 
 /* - Create a function called `addItem`. It should:
   - take an input parameter for a string `item`
   - add the new item to the global array `basket`. 
   - return `true` indicating the item was added */
 
-function addItem (item) {
+/* 3. Update the required `addItem` function to:
+  - Use the `isFull` function to prevent more than `maxItems` from being added to the basket. 
+  - If an item was added to the array, return `true`
+  - If there was no room and the item could not be added return `false` */
+
+function addItem(item) {
+  if(!isFull()) {
     basket.push(item);
-    console.log(basket);
     return true;
+  } else {
+    return false;
+  }
 }
 
   console.log('addItem - should add apple to basket:', addItem('apple'));
@@ -31,6 +41,9 @@ function listItems(arr) {
 
 addItem('orange');
 addItem('milk');
+addItem('Banana');
+addItem('Cheese');
+console.log('Trying to add sixth item: "Tortillas" should return false:', addItem('Tortillas'));
 
 console.log('listItems Test:');
 listItems(basket);
@@ -46,8 +59,6 @@ empty();
 
 console.log(`After calling empty() basket is now ${basket}`, basket);
 
-// 1. Add a global `const` named `maxItems` and set it to 5.
-const maxItems = 5;
 
 /* 2. Create a function called isFull(). It should:
   - return `false` if the basket contains *less* than max number of items
@@ -65,7 +76,4 @@ function isFull() {
 
 console.log('isFull should be false:', isFull());
 
-/* 3. Update the required `addItem` function to:
-  - Use the `isFull` function to prevent more than `maxItems` from being added to the basket. 
-  - If an item was added to the array, return `true`
-  - If there was no room and the item could not be added return `false` */
+
