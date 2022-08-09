@@ -26,6 +26,7 @@ function listItems(arr) {
     for(item of arr) {
         console.log(item);
     }
+    return true;
 }
 
 addItem('orange');
