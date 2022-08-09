@@ -26,7 +26,7 @@ function addItem(item) {
   }
 }
 
-  console.log('addItem - should add apple to basket:', addItem('apple'));
+  console.log('addItem - should add apple to basket:', addItem('Apple'));
 
 /* - Create a function called `listItems`. It should:
 - loop over the items in the `basket` array
@@ -39,8 +39,8 @@ function listItems(arr) {
     return true;
 }
 
-addItem('orange');
-addItem('milk');
+addItem('Orange');
+addItem('Milk');
 addItem('Banana');
 addItem('Cheese');
 console.log('Trying to add sixth item: "Tortillas" should return false:', addItem('Tortillas'));
