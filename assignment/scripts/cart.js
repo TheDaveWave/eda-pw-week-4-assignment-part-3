@@ -10,13 +10,20 @@ let basket = [];
   - add the new item to the global array `basket`. 
   - return `true` indicating the item was added */
 
-  function addItem (item) {
+function addItem (item) {
     basket.push(item);
     console.log(basket);
     return true;
-  }
+}
 
   console.log('addItem - should add apple to basket:', addItem('apple'));
 
+/* - Create a function called `listItems`. It should:
+- loop over the items in the `basket` array
+- console.log each individual item on a new line */
 
-  
+function listItems(arr) {
+    for(item in arr) {
+        console.log(item);
+    }
+}
