@@ -23,7 +23,7 @@ function addItem (item) {
 - console.log each individual item on a new line */
 
 function listItems(arr) {
-    for(item in arr) {
+    for(item of arr) {
         console.log(item);
     }
 }
@@ -31,3 +31,5 @@ function listItems(arr) {
 addItem('orange');
 addItem('milk');
 
+console.log('listItems Test:');
+listItems(basket);
