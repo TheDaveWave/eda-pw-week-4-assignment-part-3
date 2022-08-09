@@ -35,7 +35,13 @@ function addItem(item) {
 - Return the item removed or `null` if the item was not found */
 
 function removeItem(item) {
-  
+  let itemRemoved;
+  if(basket.indexOf(item) === -1) {
+    return null;
+  } else {
+    itemRemoved = basket.splice(basket.indexOf(item));
+    console.log('removeItem:',itemRemoved);
+  }
 }
 
 /* - Create a function called `listItems`. It should:
